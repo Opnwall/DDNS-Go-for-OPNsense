@@ -1,8 +1,6 @@
-# DDNS-Go for OPNsense
-
 <p align="center">
 
-  <img src="image/logo.png" alt="DDNS-Go for OPNsense" width="128">
+  <img src="image/logo.png" alt="DDNS-Go for OPNsense" width="300">
 
 </p>
 
