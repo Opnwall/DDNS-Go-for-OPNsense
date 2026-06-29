@@ -2,7 +2,7 @@
 
 DDNS-GO 是一款开源、轻量级的动态域名解析工具，可自动将公网 IPv4/IPv6 地址同步到多个 DNS 服务商，实现动态 IP 的域名自动更新。
 
-这是一个用于 OPNsnese 的 DDNS-Go 集成包，提供 WebGUI 菜单、服务管理、开机自启和标准 `pkg` 打包支持。
+这是一个用于 OPNsense 的 DDNS-Go 集成包，提供 WebGUI 菜单、服务管理、开机自启和标准 `pkg` 打包支持。
 
 已在以下环境测试通过：
 - OPNsense 26.1.10
