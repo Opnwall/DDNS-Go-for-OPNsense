@@ -1,5 +1,13 @@
 # DDNS-Go for OPNsense
 
+<p align="center">
+
+  <img src="image/logo.png" alt="DDNS-Go for OPNsense" width="128">
+
+</p>
+
+# DDNS-Go for OPNsense
+
 ![OPNsense](https://img.shields.io/badge/OPNsense-red)
 
 DDNS-GO 是一款开源、轻量级的动态域名解析工具，可自动将公网 IPv4/IPv6 地址同步到多个 DNS 服务商，实现动态 IP 的域名自动更新。
