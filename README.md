@@ -1,8 +1,15 @@
 # DDNS-Go for OPNsense
 
-这是一个用于 OPNsense 的 DDNS-Go 集成包，提供 WebGUI 菜单、服务管理、开机自启和标准 `pkg` 打包支持。
+DDNS-GO 是一款开源、轻量级的动态域名解析工具，可自动将公网 IPv4/IPv6 地址同步到多个 DNS 服务商，实现动态 IP 的域名自动更新。
 
-## 项目结构
+这是一个用于 OPNsnese 的 DDNS-Go 集成包，提供 WebGUI 菜单、服务管理、开机自启和标准 `pkg` 打包支持。
+
+已在以下环境测试通过：
+- OPNsense 26.1.10
+
+![](image/ddns-go.png)
+
+## 结构
 
 - `src/` 按 OPNsense 实际安装路径组织文件。
 - `src/usr/local/bin/ddns-go` 是本地内置的 FreeBSD amd64 二进制文件。
@@ -17,7 +24,7 @@
 请在 FreeBSD 或 OPNsense 主机上编译：
 
 ```sh
-make package
+./build.sh
 ```
 
 默认使用当前系统 ABI。也可以指定通用 amd64 ABI：
@@ -34,7 +41,7 @@ ABI=universal make package
 ## 安装
 
 ```sh
-./install.sh
+pkg add os-ddns-go.pkg
 ```
 
 安装完成后，刷新 OPNsense WebGUI，进入 `服务 > DDNS-Go`。
@@ -51,7 +58,7 @@ ABI=universal make package
 ## 卸载
 
 ```sh
-./uninstall.sh
+pkg delete os-ddns.go
 ```
 
 卸载时会停止服务，并清理以下文件：
@@ -61,12 +68,6 @@ ABI=universal make package
 - `/var/log/ddnsgo.log`
 - `/usr/local/etc/ddns-go`
 
-## WebGUI
+## 免责
 
-WebGUI 页面提供：
-
-- 服务状态显示
-- 启动、停止、重启控制
-- 访问地址显示
-- 配置文件在线编辑
-- 运行日志查看
+这是一个非官方社区项目，不受 OPNsense 团队支持，自行承担使用过程中可能产生的风险。
